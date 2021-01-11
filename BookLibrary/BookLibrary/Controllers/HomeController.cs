@@ -10,7 +10,7 @@ namespace BookLibrary.Controllers
     {
         public ViewResult Index()
         {
-            return View("TempView/SandeepTemp.cshtml");
+            return View();
         }
 
         public ViewResult AboutUs()
