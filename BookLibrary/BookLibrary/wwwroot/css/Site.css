@@ -1,6 +1,8 @@
 ﻿body {
 }
-.logo{
-    height:200px;
-    width:200px;
+
+.footer {
+    position: relative;
+    width: 100%;
+    line-height: 50px; /* Vertically center the text there */
 }
