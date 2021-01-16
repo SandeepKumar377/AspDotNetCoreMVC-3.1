@@ -19,7 +19,7 @@ namespace BookLibrary
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<BookLibraryContext>(
-                options => options.UseSqlServer("Server=.;Database=BookLibrary;Integrated Security=True;"));
+                options => options.UseSqlServer("Server=DELL;Database=BookLibrary;Integrated Security=True;"));
 
             services.AddControllersWithViews();
 
