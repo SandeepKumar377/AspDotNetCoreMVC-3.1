@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ctC1WES9yMW6hRkgCKRtO3H2NlQAZgxMwmg8snvzUI1F8+1uxPQ6xgahENHH9CsZU41ZBE1UTfFmJpTLrQ/Naw==",
+  "dgSpecHash": "51a5jzklOxWo0pd990fSpXi1tpAq7bnXVK80fg4tNwnBrPjwY4rbAof9qGI6hkaJ3uo/yCiSjHVtdroBGDKfDg==",
   "success": true,
   "projectFilePath": "F:\\#Visual Studio 2019 Project\\Asp.Net Core MVC 3.1\\BookLibrary\\BookLibrary\\BookLibrary\\BookLibrary.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.3\\microsoft.entityframeworkcore.design.3.1.3.nupkg.sha512",
     "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.3\\microsoft.entityframeworkcore.relational.3.1.3.nupkg.sha512",
     "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.3\\microsoft.entityframeworkcore.sqlserver.3.1.3.nupkg.sha512",
+    "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.3\\microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
     "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.3\\microsoft.extensions.caching.abstractions.3.1.3.nupkg.sha512",
     "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.3\\microsoft.extensions.caching.memory.3.1.3.nupkg.sha512",
     "C:\\Users\\Sandeep\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.3\\microsoft.extensions.configuration.3.1.3.nupkg.sha512",
