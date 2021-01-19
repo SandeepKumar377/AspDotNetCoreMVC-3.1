@@ -36,7 +36,7 @@ namespace BookLibrary.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0 )
         {
-            ViewBag.Language = new SelectList(new List<string>() { "Hindi", "English", "Dutch" });
+            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
 
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
@@ -55,11 +55,19 @@ namespace BookLibrary.Controllers
                 }
             }
 
-            ViewBag.Language = new SelectList(new List<string>() { "Hindi", "English", "Dutch" });
-            //ViewBag.IsSuccess = false;
-            //ViewBag.BookId = 0;
-
+            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
+         
             return View();
+        }
+
+        private List<LanguageModel> GetLanguage()
+        {
+            return new List<LanguageModel>()
+            {
+                new LanguageModel() { Id=1, Text="Hindi"},
+                new LanguageModel() { Id=2, Text="English"},
+                new LanguageModel() { Id=3, Text="Dutch"},
+            };            
         }
 
     }
