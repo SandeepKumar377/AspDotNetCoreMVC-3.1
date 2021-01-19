@@ -1,6 +1,7 @@
 ﻿using BookLibrary.Models;
 using BookLibrary.Repository;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,8 @@ namespace BookLibrary.Controllers
 
         public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0 )
         {
+            ViewBag.Language = new SelectList(new List<string>() { "Hindi", "English", "Dutch" });
+
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
             return View();
@@ -51,6 +54,8 @@ namespace BookLibrary.Controllers
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
             }
+
+            ViewBag.Language = new SelectList(new List<string>() { "Hindi", "English", "Dutch" });
             //ViewBag.IsSuccess = false;
             //ViewBag.BookId = 0;
 

@@ -9,7 +9,7 @@ namespace BookLibrary.Models
     public class BookModel
     {
         public int Id { get; set; }
-        [StringLength(100, MinimumLength =5)]
+        [StringLength(100)]
         [Required(ErrorMessage ="Please enter the Title of your book!")]
         public string Title { get; set; }       
         [Display(Name ="Book Author Name")]
@@ -18,7 +18,9 @@ namespace BookLibrary.Models
         [StringLength(100, MinimumLength =5)]
         public string Description { get; set; }
         public string Category { get; set; }
+        [Required(ErrorMessage ="Please enter the Book Language!")]
         public string Language { get; set; }
+        [StringLength(5, MinimumLength =2)]
         [Required(ErrorMessage = "Please enter the Total Pages!")]
         public int? TotalPages { get; set; }
     }
