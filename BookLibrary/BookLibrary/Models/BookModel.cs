@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
+using BookLibrary.Enums;
 
 namespace BookLibrary.Models
 {
@@ -15,12 +16,15 @@ namespace BookLibrary.Models
         [Display(Name ="Book Author Name")]
         [Required(ErrorMessage ="Please enter the Author of book name!")]
         public string Author { get; set; }
-        [StringLength(100, MinimumLength =5)]
+        [StringLength(500)]
         public string Description { get; set; }
         public string Category { get; set; }
-        [Required(ErrorMessage ="Please enter the Book Language!")]
+       // [Required(ErrorMessage ="Please enter the Book Language!")]
+        public int LanguageId { get; set; }
+
         public string Language { get; set; }
-        [StringLength(5, MinimumLength =2)]
+
+
         [Required(ErrorMessage = "Please enter the Total Pages!")]
         public int? TotalPages { get; set; }
     }

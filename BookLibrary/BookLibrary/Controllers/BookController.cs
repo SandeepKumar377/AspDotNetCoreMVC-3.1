@@ -12,9 +12,11 @@ namespace BookLibrary.Controllers
     public class BookController : Controller
     {
         private readonly BookRepository _bookRepository= null;
-        public BookController(BookRepository bookRepository)
+        private readonly LanguageRepository _languageRepository= null;
+        public BookController(BookRepository bookRepository, LanguageRepository languageRepository)
         {
             _bookRepository = bookRepository;
+            _languageRepository = languageRepository;
         }
         public async Task<ViewResult> GetAllBooks()
         {
@@ -23,6 +25,7 @@ namespace BookLibrary.Controllers
             return View(data);
         }
 
+       [Route("book-details/{id}", Name ="bookDetailsRoute")]
         public async Task<ViewResult> GetBook(int id)
         {
             var data= await _bookRepository.GetBookById(id);
@@ -34,13 +37,14 @@ namespace BookLibrary.Controllers
             return _bookRepository.SearchBooks(bookName, authorName);
         }
 
-        public ViewResult AddNewBook(bool isSuccess = false, int bookId = 0 )
+        public async Task<ViewResult> AddNewBook(bool isSuccess = false, int bookId = 0 )
         {
-            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
-
+            var model = new BookModel();
+            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Name");
+            
             ViewBag.IsSuccess = isSuccess;
             ViewBag.BookId = bookId;
-            return View();
+            return View(model);
         }
 
         [HttpPost]
@@ -54,21 +58,8 @@ namespace BookLibrary.Controllers
                     return RedirectToAction(nameof(AddNewBook), new { isSuccess = true, bookId = id });
                 }
             }
-
-            ViewBag.Language = new SelectList(GetLanguage(), "Id", "Text");
-         
+            ViewBag.Language = new SelectList(await _languageRepository.GetLanguages(), "Id", "Name");
             return View();
-        }
-
-        private List<LanguageModel> GetLanguage()
-        {
-            return new List<LanguageModel>()
-            {
-                new LanguageModel() { Id=1, Text="Hindi"},
-                new LanguageModel() { Id=2, Text="English"},
-                new LanguageModel() { Id=3, Text="Dutch"},
-            };            
-        }
-
+        }       
     }
 }

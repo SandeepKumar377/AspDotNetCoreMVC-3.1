@@ -17,12 +17,14 @@ namespace BookLibrary.Data
 
         public string Category { get; set; }
 
-        public string Language { get; set; }
-
+        public int LanguageId { get; set; }
+         
         public int TotalPages { get; set; }
 
         public DateTime? CreatedOn { get; set; }
 
         public DateTime? UpdatedOn { get; set; }
+
+        public Language Language { get; set; }
     }
 }
