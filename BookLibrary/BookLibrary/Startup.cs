@@ -27,6 +27,11 @@ namespace BookLibrary
 
 #if DEBUG
             services.AddRazorPages().AddRazorRuntimeCompilation();
+            // uncomment this code to disable client side validation.
+            //    .AddViewOptions(option => 
+            //{
+            //    option.HtmlHelperOptions.ClientValidationEnabled = false;
+            //});
 #endif
             services.AddScoped<BookRepository, BookRepository>();
             services.AddScoped<LanguageRepository, LanguageRepository>();
