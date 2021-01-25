@@ -17,15 +17,9 @@
             </button>
         </div>
     }
-    @*This is use for proccess indicator*@
-    <div class="d-flex justify-content-center">
-        <div class="spinner-border" role="status" id="processIndicator" style="">
-            <span class="visually-hidden"></span>
-        </div>
-    </div>
+    
 
-    <form method="post" data-ajax="true" data-ajax-complete="myComplete" data-ajax-success="mySuccess"
-          data-ajax-failure="myFailure" data-ajax-loading="#processIndicator" asp-action="AddNewBook" asp-controller="Book">
+    <form method="post" enctype="multipart/form-data" asp-action="AddNewBook" asp-controller="Book">
         <div asp-validation-summary="None" class="text-danger"></div>
         <div class="form-group">
             <label asp-for="Title"></label>
@@ -54,6 +48,14 @@
             <input asp-for="TotalPages" class="form-control" />
             <span asp-validation-for="TotalPages" class="text-danger"></span>
         </div>
+        <div class="form-group">
+            <label asp-for="CoverPhoto"></label>
+            <div class="custom-file">
+                <input asp-for="CoverPhoto" class="custom-file-input" id="customFile" />
+                <label class="custom-file-label" for="customFile">Choose File</label>
+            </div>
+            <span asp-validation-for="CoverPhoto " class="text-danger"></span>
+        </div>
 
         <div class="form-group">
             <input type="submit" value="Add Book" class="btn btn-primary" />
@@ -61,19 +63,6 @@
     </form>
 </div>
 
-@section scripts {
-<script>
-    function myComplete() {
-        alert("Hello...I'm from complete!");
-    }
-    function mySuccess() {
-        alert("Hello...I'm from Success!");
-    }
-    function myFailure() {
-        alert("Hello...I'm from Failure!");
-    }
-</script>
-}
 
 
 

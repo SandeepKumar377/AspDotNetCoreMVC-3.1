@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using BookLibrary.Enums;
+using Microsoft.AspNetCore.Http;
 
 namespace BookLibrary.Models
 {
@@ -27,5 +28,11 @@ namespace BookLibrary.Models
 
         [Required(ErrorMessage = "Please enter the Total Pages!")]
         public int? TotalPages { get; set; }
+        [Display(Name ="Choose the cover Photo of your Book")]
+        [Required]
+
+        public IFormFile CoverPhoto { get; set; }
+
+        public string CoverImageUrl { get; set; }
     }
 }

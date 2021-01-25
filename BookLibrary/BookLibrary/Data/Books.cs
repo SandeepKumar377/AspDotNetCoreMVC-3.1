@@ -21,6 +21,8 @@ namespace BookLibrary.Data
          
         public int TotalPages { get; set; }
 
+        public string CoverImageUrl { get; set; }
+
         public DateTime? CreatedOn { get; set; }
 
         public DateTime? UpdatedOn { get; set; }
