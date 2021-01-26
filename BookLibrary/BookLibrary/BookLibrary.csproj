@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\books\coverPhoto\" />
+    <Folder Include="wwwroot\books\galleryImage\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 

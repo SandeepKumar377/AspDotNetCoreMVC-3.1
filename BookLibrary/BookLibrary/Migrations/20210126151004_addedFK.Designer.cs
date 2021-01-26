@@ -4,14 +4,16 @@ using BookLibrary.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookLibrary.Migrations
 {
     [DbContext(typeof(BookLibraryContext))]
-    partial class BookLibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20210126151004_addedFK")]
+    partial class addedFK
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

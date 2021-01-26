@@ -4,14 +4,16 @@ using BookLibrary.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BookLibrary.Migrations
 {
     [DbContext(typeof(BookLibraryContext))]
-    partial class BookLibraryContextModelSnapshot : ModelSnapshot
+    [Migration("20210126150416_addednewgallerytable")]
+    partial class addednewgallerytable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -29,6 +31,9 @@ namespace BookLibrary.Migrations
                     b.Property<int>("BookId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("BooksId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -37,7 +42,7 @@ namespace BookLibrary.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookId");
+                    b.HasIndex("BooksId");
 
                     b.ToTable("BookGallery");
                 });
@@ -103,11 +108,9 @@ namespace BookLibrary.Migrations
 
             modelBuilder.Entity("BookLibrary.Data.BookGallery", b =>
                 {
-                    b.HasOne("BookLibrary.Data.Books", "Book")
+                    b.HasOne("BookLibrary.Data.Books", null)
                         .WithMany("bookGallery")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("BooksId");
                 });
 
             modelBuilder.Entity("BookLibrary.Data.Books", b =>
