@@ -28,18 +28,25 @@ namespace BookLibrary.Models
 
         [Required(ErrorMessage = "Please enter the Total Pages!")]
         public int? TotalPages { get; set; }
-        [Display(Name ="Choose the cover Photo of your Book")]
+        [Display(Name ="Choose the cover Photo of your Book!")]
         [Required]
 
         public IFormFile CoverPhoto { get; set; }
 
         public string CoverImageUrl { get; set; }
 
-        [Display(Name = "Choose the Gallery Photo of your Book")]
+        [Display(Name = "Choose the Gallery Photo of your Book!")]
         [Required]
 
         public IFormFileCollection GalleryPhoto { get; set; }
 
         public List<GalleryModel> Gallery { get; set; }
+
+        [Display(Name = "Upload your book in Pdf format!")]
+        [Required]
+
+        public IFormFile BookPdf { get; set; }
+
+        public string BookPdfUrl { get; set; }
     }
 }

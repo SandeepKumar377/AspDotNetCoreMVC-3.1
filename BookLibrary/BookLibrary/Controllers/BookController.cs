@@ -80,6 +80,11 @@ namespace BookLibrary.Controllers
                         
                     }
                 }
+                if (bookModel.BookPdf != null)
+                {
+                    string folder = "books/bookPdf/";
+                    bookModel.BookPdfUrl = await UploadImage(folder, bookModel.BookPdf);
+                }
                 int id = await _bookRepository.AddNewBook(bookModel);
                 if (id > 0)
                 {
