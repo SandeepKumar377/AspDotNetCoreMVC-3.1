@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"]= "Home"; 
+    ViewData["Title"] = "Home";
 }
 
 <div class="jumbotron">
@@ -10,19 +10,12 @@
 </div>
 
 <div class="container">
-    @*<h3>Top Books</h3>*@
-    <big>Top Books</big>
-    <div class="row">
-        <div class="col-md-4">          
-            <partial name="_BookThumbnail" model="new BookModel()" />
-        </div>
-        <div class="col-md-4">
-            <partial name="_BookThumbnail" model="new BookModel()" />
-        </div>
-        <div class="col-md-4">
-            <partial name="_BookThumbnail" model="new BookModel()" />
-        </div>
-    </div>
+    <h3>Top Books</h3>
+
+    @*@await Component.InvokeAsync("TopBooks", new {count=3})*@ 
+
+    <vc:top-books count="10"></vc:top-books>
+   
 </div>
 
 @section scripts{
