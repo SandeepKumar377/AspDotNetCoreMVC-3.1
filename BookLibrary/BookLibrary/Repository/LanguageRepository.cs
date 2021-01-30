@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BookLibrary.Repository
 {
-    public class LanguageRepository
+    public class LanguageRepository : ILanguageRepository
     {
         private readonly BookLibraryContext _context = null;
 
@@ -21,9 +21,9 @@ namespace BookLibrary.Repository
         {
             return await _context.Language.Select(x => new LanguageModel()
             {
-                Id=x.Id,
-                Description=x.Description,
-                Name=x.Name
+                Id = x.Id,
+                Description = x.Description,
+                Name = x.Name
             }).ToListAsync();
         }
     }

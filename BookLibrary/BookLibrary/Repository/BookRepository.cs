@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace BookLibrary.Repository
 {
-    public class BookRepository 
+    public class BookRepository : IBookRepository
     {
         private readonly BookLibraryContext _context = null;
-        
+
         public BookRepository(BookLibraryContext context)
         {
             _context = context;
@@ -20,15 +20,15 @@ namespace BookLibrary.Repository
         {
             var newBook = new Books()
             {
-                Author=model.Author,
-                CreatedOn=DateTime.UtcNow,
-                Description=model.Description,
-                Title=model.Title,
-                LanguageId=model.LanguageId,
-                TotalPages=model.TotalPages.HasValue ? model.TotalPages.Value : 0,
-                UpdatedOn=DateTime.UtcNow,
-                CoverImageUrl= model.CoverImageUrl,
-                BookPdfUrl=model.BookPdfUrl
+                Author = model.Author,
+                CreatedOn = DateTime.UtcNow,
+                Description = model.Description,
+                Title = model.Title,
+                LanguageId = model.LanguageId,
+                TotalPages = model.TotalPages.HasValue ? model.TotalPages.Value : 0,
+                UpdatedOn = DateTime.UtcNow,
+                CoverImageUrl = model.CoverImageUrl,
+                BookPdfUrl = model.BookPdfUrl
             };
 
             newBook.bookGallery = new List<BookGallery>();
@@ -36,8 +36,8 @@ namespace BookLibrary.Repository
             {
                 newBook.bookGallery.Add(new BookGallery()
                 {
-                    Name=file.Name,
-                    URL=file.URL
+                    Name = file.Name,
+                    URL = file.URL
                 });
             }
             await _context.Books.AddAsync(newBook);
@@ -47,7 +47,7 @@ namespace BookLibrary.Repository
 
         }
         public async Task<List<BookModel>> GetAllBooks()
-        {           
+        {
             return await _context.Books
                  .Select(book => new BookModel()
                  {
@@ -59,7 +59,7 @@ namespace BookLibrary.Repository
                      Language = book.Language.Name,
                      Title = book.Title,
                      TotalPages = book.TotalPages,
-                     CoverImageUrl=book.CoverImageUrl
+                     CoverImageUrl = book.CoverImageUrl
                  }).ToListAsync();
         }
 
@@ -99,12 +99,12 @@ namespace BookLibrary.Repository
                          Name = g.Name,
                          URL = g.URL
                      }).ToList(),
-                     BookPdfUrl=book.BookPdfUrl
+                     BookPdfUrl = book.BookPdfUrl
                  }).FirstOrDefaultAsync();
         }
-        public List<BookModel> SearchBooks(string title,string authorName)
+        public List<BookModel> SearchBooks(string title, string authorName)
         {
             return null;
-        }        
+        }
     }
 }
