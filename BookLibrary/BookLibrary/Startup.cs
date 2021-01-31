@@ -44,7 +44,10 @@ namespace BookLibrary
 #endif
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
-            services.Configure<NewBookAlertConfig>(_configuration.GetSection("NewBookAlert"));
+            services.AddSingleton<IMessageRepository, MessageRepository>();
+
+            services.Configure<NewBookAlertConfig>("InternalBook", _configuration.GetSection("NewBookAlert"));
+            services.Configure<NewBookAlertConfig>("ThirdPartyBook", _configuration.GetSection("ThirdPartyBook"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
