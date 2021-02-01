@@ -13,6 +13,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using BookLibrary.Models;
+using Microsoft.AspNetCore.Identity;
 
 namespace BookLibrary
 {
@@ -31,6 +32,9 @@ namespace BookLibrary
         {
             services.AddDbContext<BookLibraryContext>(
                 options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<BookLibraryContext>();
 
             services.AddControllersWithViews();
 
@@ -61,6 +65,8 @@ namespace BookLibrary
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {

@@ -24,9 +24,8 @@ namespace BookLibrary.Controllers
         }
         public ViewResult Index()
         {
-            bool isDisplay = _newBookAlertconfiguration.DisplayNewBookAlert;
-            bool isDisplay1 = _thirdPartyBookconfiguration.DisplayNewBookAlert;
-
+            //bool isDisplay = _newBookAlertconfiguration.DisplayNewBookAlert;
+            //bool isDisplay1 = _thirdPartyBookconfiguration.DisplayNewBookAlert;
             //var newBook = configuration.GetSection("NewBookAlert");
             //var result = newBook.GetValue<bool>("DisplayNewBookAlert");
             //var bookName = newBook.GetValue<string>("BookName");

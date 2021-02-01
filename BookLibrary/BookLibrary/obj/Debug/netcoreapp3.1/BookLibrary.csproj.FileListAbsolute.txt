@@ -49,8 +49,6 @@ F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\Book
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Connections.Abstractions.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.CookiePolicy.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cors.dll
-F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cryptography.Internal.dll
-F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Abstractions.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.DataProtection.Extensions.dll
@@ -129,8 +127,6 @@ F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\Book
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.Abstractions.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Hosting.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Http.dll
-F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Identity.Core.dll
-F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Identity.Stores.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.Abstractions.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Localization.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\Microsoft.Extensions.Logging.Configuration.dll
@@ -155,7 +151,6 @@ F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\Book
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Buffers.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Collections.Concurrent.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Collections.dll
-F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Collections.Immutable.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Collections.NonGeneric.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Collections.Specialized.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.ComponentModel.Annotations.dll
@@ -172,7 +167,6 @@ F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\Book
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Data.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Contracts.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Debug.dll
-F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.DiagnosticSource.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.EventLog.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.FileVersionInfo.dll
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\refs\System.Diagnostics.Process.dll
@@ -380,3 +374,10 @@ F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\Book
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_BookThumbnail.cshtml.g.cs
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\TopBooks\Default.cshtml.g.cs
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\appsettings.Production.json
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
