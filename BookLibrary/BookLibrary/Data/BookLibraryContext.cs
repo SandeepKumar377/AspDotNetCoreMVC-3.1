@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using BookLibrary.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BookLibrary.Data
 {
-    public class BookLibraryContext : IdentityDbContext 
+    public class BookLibraryContext : IdentityDbContext<ApplicationUser> 
     {
         public BookLibraryContext(DbContextOptions<BookLibraryContext> options)
             : base(options)

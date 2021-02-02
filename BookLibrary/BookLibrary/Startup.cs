@@ -33,7 +33,7 @@ namespace BookLibrary
             services.AddDbContext<BookLibraryContext>(
                 options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<BookLibraryContext>();
 
             services.AddControllersWithViews();
@@ -49,6 +49,7 @@ namespace BookLibrary
             services.AddScoped<IBookRepository, BookRepository>();
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddSingleton<IMessageRepository, MessageRepository>();
+            services.AddScoped<IAccountRepository, AccountRepository>();
 
             services.Configure<NewBookAlertConfig>("InternalBook", _configuration.GetSection("NewBookAlert"));
             services.Configure<NewBookAlertConfig>("ThirdPartyBook", _configuration.GetSection("ThirdPartyBook"));
