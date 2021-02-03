@@ -1,7 +1,9 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-
+/BookLibrary/BookLibrary/bin
+/BookLibrary/BookLibrary/obj
+/.vs
 /BookLibrary/BookLibrary/wwwroot/lib/twitter-bootstrap/scss/_variables.scss
 /BookLibrary/BookLibrary/wwwroot/lib/twitter-bootstrap/scss/_utilities.scss
 /BookLibrary/BookLibrary/wwwroot/lib/twitter-bootstrap/scss/_type.scss
