@@ -1,9 +1,12 @@
 ﻿################################################################################
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
-/BookLibrary/BookLibrary/bin
-/BookLibrary/BookLibrary/obj
 /.vs
+/BookLibrary/BookLibrary/.vs/BookLibrary
+/BookLibrary/BookLibrary/bin/Debug/netcoreapp3.1
+/BookLibrary/BookLibrary/obj
+/BookLibrary/BookLibrary/bin/Release/netcoreapp3.1
+
 /BookLibrary/BookLibrary/wwwroot/lib/twitter-bootstrap/scss/_variables.scss
 /BookLibrary/BookLibrary/wwwroot/lib/twitter-bootstrap/scss/_utilities.scss
 /BookLibrary/BookLibrary/wwwroot/lib/twitter-bootstrap/scss/_type.scss
