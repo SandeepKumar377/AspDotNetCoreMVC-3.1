@@ -46,6 +46,10 @@ namespace BookLibrary
                 options.Password.RequireNonAlphanumeric = false;
             });
 
+            services.ConfigureApplicationCookie(config =>
+            {
+                config.LoginPath = _configuration["LoginPagePath:LoginPath"];
+            });
             services.AddControllersWithViews();
 
 #if DEBUG
@@ -78,18 +82,13 @@ namespace BookLibrary
             app.UseRouting();
 
             app.UseAuthentication();
-
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
             endpoints.MapDefaultControllerRoute();
             //endpoints.MapControllerRoute(
             //    name: "Default",
             //    pattern: "{controller=Home}/{action=Index}/{id?}");
-
-            //endpoints.MapControllerRoute(
-            //     name: "AboutUs",
-            //     pattern: "about-us",
-            //     defaults: new { controller = "Home", action = "AboutUs" });
             });
         }
     }
