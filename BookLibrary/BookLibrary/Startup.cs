@@ -15,6 +15,7 @@ using Microsoft.Extensions.Configuration;
 using BookLibrary.Models;
 using Microsoft.AspNetCore.Identity;
 using BookLibrary.Helpers;
+using BookLibrary.Service;
 
 namespace BookLibrary
 {
@@ -65,6 +66,8 @@ namespace BookLibrary
             services.AddScoped<ILanguageRepository, LanguageRepository>();
             services.AddSingleton<IMessageRepository, MessageRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
+            services.AddScoped<IUserService, UserService>();
+
             services.AddScoped<IUserClaimsPrincipalFactory<ApplicationUser>, ApplicationUserClaimsPrincipalFactory>(); 
             services.Configure<NewBookAlertConfig>("InternalBook", _configuration.GetSection("NewBookAlert"));
             services.Configure<NewBookAlertConfig>("ThirdPartyBook", _configuration.GetSection("ThirdPartyBook"));
