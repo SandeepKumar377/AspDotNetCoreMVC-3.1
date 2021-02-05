@@ -32,11 +32,16 @@ namespace BookLibrary.Controllers
         }
         public async Task<ViewResult> Index()
         {
-            UserEmailOptions options = new UserEmailOptions
-            { 
-                ToEmails = new List<string>() { "test@gmail.com"}
-            };
-            await _emailService.SendTestEmail(options);
+            //UserEmailOptions options = new UserEmailOptions
+            //{ 
+            //    ToEmails = new List<string>() { "test@gmail.com"},
+            //    PlaceHolders = new List<KeyValuePair<string, string>>()
+            //    { 
+            //        new KeyValuePair<string, string>("{{UserName}}", "Sandeep")                
+            //    }
+
+            //};
+            //await _emailService.SendTestEmail(options);
 
             //var userId = _userService.GetUserId();
             //var isLoggedIn = _userService.IsAuthencated();

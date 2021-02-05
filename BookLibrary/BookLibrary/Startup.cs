@@ -36,7 +36,7 @@ namespace BookLibrary
                 options => options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<BookLibraryContext>();
+                .AddEntityFrameworkStores<BookLibraryContext>().AddDefaultTokenProviders();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -46,11 +46,13 @@ namespace BookLibrary
                 options.Password.RequireLowercase = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireNonAlphanumeric = false;
+
+                options.SignIn.RequireConfirmedEmail = true;
             });
 
             services.ConfigureApplicationCookie(config =>
             {
-                config.LoginPath = _configuration["LoginPagePath:LoginPath"];
+                config.LoginPath = _configuration["Application:LoginPath"];
             });
             services.AddControllersWithViews();
 

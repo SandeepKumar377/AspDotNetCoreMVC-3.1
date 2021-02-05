@@ -13,5 +13,6 @@ namespace BookLibrary.Repository
         Task SignOutAsync();
 
         Task<IdentityResult> ChangePasswordAsync(ChangePasswordModel model);
+        Task<IdentityResult> ConfirmEmailAsync(string uid, string token);
     }
 }
