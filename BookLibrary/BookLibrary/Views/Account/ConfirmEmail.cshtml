@@ -1,12 +1,12 @@
-﻿
+﻿@model EmailConfirmModel
 @{
-    ViewData["Title"] = "ConfirmEmail";
+    ViewData["Title"] = "Confirm Email";
 }
 
 <div class="container">
     <div class="row text-center">
         <div class="col-md-4">
-            @if (ViewBag.IsSuccess == true)
+            @if (Model.EmailVerified == true)
             {
                 <div class="alert alert-success" role="alert">
                     <p> Your email has been Verified Successfully!</p>
@@ -14,9 +14,26 @@
             }
             else
             {
-                <div class="alert alert-danger" role="alert">
-                    <p>Something went wrong or token has been expired!</p>
-                </div>                
+                @if (Model.EmailSend)
+                {
+                    <div class="alert alert-success" role="alert">
+                        <p>Re-send Email on your registered email id.</p>
+                    </div>
+                }
+                else
+                {
+                    <div class="alert alert-success" role="alert">
+                        <p>We have send an email on your email id. Click on the link to login.</p>
+                    </div>                    
+                }
+                <form asp-action="ConfirmEmail">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <input type="hidden" asp-for="Email" />
+                    <p class="text-info">Did not get email of deleted by mistake?</p>
+                    <div class="form-group">
+                        <input type="submit" value="Resend confirmation email" class="btn btn-primary" />
+                    </div>
+                </form>
             }
         </div>
     </div>
