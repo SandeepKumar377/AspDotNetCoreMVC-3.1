@@ -14,10 +14,10 @@ namespace BookLibrary.Models
         [Required]
         public string Token { get; set; }
 
-        [Required, DataType(DataType.Password)]
+        [Required, DataType(DataType.Password), Display(Name ="New Password")]
         public string NewPassword { get; set; }
 
-        [Required, DataType(DataType.Password)]
+        [Required, DataType(DataType.Password), Display(Name = "Confirm New Password")]
         [Compare("NewPassword")]
         public string ConfirmNewPassword { get; set; }
 
