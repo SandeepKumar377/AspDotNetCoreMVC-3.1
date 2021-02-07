@@ -95,9 +95,13 @@ namespace BookLibrary
             app.UseEndpoints(endpoints =>
             {
             endpoints.MapDefaultControllerRoute();
-            //endpoints.MapControllerRoute(
-            //    name: "Default",
-            //    pattern: "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapControllerRoute(
+                //    name: "Default",
+                //    pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                //endpoints.MapControllerRoute(
+                //    name: "MyArea",
+                //    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}");
             });
         }
     }

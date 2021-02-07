@@ -1,8 +1,18 @@
 ﻿body {
+   
 }
-
+}
 .footer {
     position: relative;
     width: 100%;
     line-height: 50px; /* Vertically center the text there */
+}
+.jumbotron{
+    margin-top:0px;
+    background :rgba(0, 0, 0, 0.9);
+    color: rgb(106, 128, 129);
+}
+header, .navbar-toggler, .jumbotron {
+    border-radius: 0px;
+    font-size :16px;
 }
