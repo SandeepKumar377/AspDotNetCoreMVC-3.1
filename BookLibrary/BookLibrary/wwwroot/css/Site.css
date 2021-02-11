@@ -1,7 +1,4 @@
-﻿body {
-   
-}
-}
+﻿
 .footer {
     position: relative;
     width: 100%;
@@ -12,7 +9,7 @@
     background :rgba(0, 0, 0, 0.9);
     color: rgb(106, 128, 129);
 }
-header, .navbar-toggler, .jumbotron {
-    border-radius: 0px;
-    font-size :16px;
+.header, .navbar-toggler, .jumbotron {
+    border-radius: 0rem;
+    font-size: 16px;
 }

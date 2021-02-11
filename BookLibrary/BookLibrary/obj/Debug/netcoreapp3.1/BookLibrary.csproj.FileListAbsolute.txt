@@ -431,3 +431,4 @@ F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\Book
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\obj\Debug\netcoreapp3.1\BookLibrary.pdb
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\obj\Debug\netcoreapp3.1\BookLibrary.genruntimeconfig.cache
 F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\obj\Debug\netcoreapp3.1\BookLibrary.csprojAssemblyReference.cache
+F:\#Visual Studio 2019 Project\Asp.Net Core MVC 3.1\BookLibrary\BookLibrary\BookLibrary\bin\Debug\netcoreapp3.1\bundleconfig.json
