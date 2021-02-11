@@ -72,6 +72,10 @@ namespace BookLibrary.Controllers
                 { 
                     ModelState.AddModelError("", "Not allowed to Login!");
                 }
+                else if (result.IsLockedOut)
+                {
+                    ModelState.AddModelError("", "Account Blocked try after some time!");
+                }
                 else
                 { 
                 ModelState.AddModelError("", "Invalid credertials");

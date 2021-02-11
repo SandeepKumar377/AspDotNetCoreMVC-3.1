@@ -48,6 +48,14 @@ namespace BookLibrary
                 options.Password.RequireNonAlphanumeric = false;
 
                 options.SignIn.RequireConfirmedEmail = true;
+
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+                options.Lockout.MaxFailedAccessAttempts = 3;
+            });
+
+            services.Configure<DataProtectionTokenProviderOptions>(options => 
+            {
+                options.TokenLifespan = TimeSpan.FromDays(1);            
             });
 
             services.ConfigureApplicationCookie(config =>
