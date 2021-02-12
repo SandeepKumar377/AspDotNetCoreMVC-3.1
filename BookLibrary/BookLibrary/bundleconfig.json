@@ -1,8 +1,18 @@
 [
   {
-    "outputFileName": "wwwroot/css/site.min.css",
+    "outputFileName": "wwwroot/customCSS/site.min.css",
     "inputFiles": [
-      "wwwroot/css/Site.css"
+      "wwwroot/customCSS/Site.css"
+    ],
+    "minify": {
+      "enabled": true,
+      "renameLocals": true
+    }
+  },
+  {
+    "outputFileName": "wwwroot/customJS/site.min.js",
+    "inputFiles": [
+      "wwwroot/customJS/site.js"
     ],
     "minify": {
       "enabled": true,

@@ -4,17 +4,17 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <_PublishTargetUrl>C:\WebSiteOnIISServer\BookLibrary</_PublishTargetUrl>
     <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\WebSiteOnIISServer\BookLibrary</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
     <DestinationConnectionStrings Include="DefaultConnection">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=aspnet-53bc9b9d-9d6a-45d4-8429-2a2761773502%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+      <Value>Server=DELL%3bDatabase=BookLibrary%3bIntegrated Security=True%3b</Value>
     </DestinationConnectionStrings>
   </ItemGroup>
   <ItemGroup>
     <EFMigrations Include="BookLibrary.Data.BookLibraryContext">
-      <Value>Server=%28localdb%29\mssqllocaldb%3bDatabase=aspnet-53bc9b9d-9d6a-45d4-8429-2a2761773502%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+      <Value>Server=DELL%3bDatabase=BookLibrary%3bIntegrated Security=True%3b</Value>
     </EFMigrations>
   </ItemGroup>
 </Project>

@@ -22,61 +22,67 @@
 
 <form method="post" enctype="multipart/form-data" asp-action="AddNewBook" asp-controller="Book">
     <div asp-validation-summary="None" class="text-danger"></div>
-    <div class="form-group">
-        <label asp-for="Title"></label>
-        <input asp-for="Title" class="form-control" />
-        <span asp-validation-for="Title" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Author"></label>
-        <input asp-for="Author" class="form-control" />
-        <span asp-validation-for="Author" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="LanguageId"></label>
-        <select asp-for="LanguageId"  class="form-control" 
-                asp-items="(await _languageRepo.GetLanguages()).Select(x=> new SelectListItem() { Text=x.Name, Value=x.Id.ToString()})">
-            <option value="">Please choose Book Language...</option>
-        </select>
-        <span asp-validation-for="LanguageId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="Description"></label>
-        <textarea asp-for="Description" class="form-control"></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="TotalPages">Total Pages</label>
-        <input asp-for="TotalPages" class="form-control" />
-        <span asp-validation-for="TotalPages" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="CoverPhoto"></label>
-        <div class="custom-file">
-            <input asp-for="CoverPhoto" class="custom-file-input" id="customFile" />
-            <label class="custom-file-label" for="customFile">Choose File</label>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control" />
+            <span asp-validation-for="Title" class="text-danger"></span>
         </div>
-        <span asp-validation-for="CoverPhoto " class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="GalleryPhoto"></label>
-        <div class="custom-file">
-            <input asp-for="GalleryPhoto" class="custom-file-input" id="customFile" />
-            <label class="custom-file-label" for="customFile">Choose File</label>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label asp-for="Author"></label>
+            <input asp-for="Author" class="form-control" />
+            <span asp-validation-for="Author" class="text-danger"></span>
         </div>
-        <span asp-validation-for="GalleryPhoto " class="text-danger"></span>
     </div>
-    <div class="form-group">
-        <label asp-for="BookPdf"></label>
-        <div class="custom-file">
-            <input asp-for="BookPdf" class="custom-file-input" id="customFile" />
-            <label class="custom-file-label" for="customFile">Choose File</label>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label asp-for="LanguageId"></label>
+            <select asp-for="LanguageId" class="form-control"
+                    asp-items="(await _languageRepo.GetLanguages()).Select(x=> new SelectListItem() { Text=x.Name, Value=x.Id.ToString()})">
+                <option value="">Please choose Book Language...</option>
+            </select>
+            <span asp-validation-for="LanguageId" class="text-danger"></span>
         </div>
-        <span asp-validation-for="BookPdf " class="text-danger"></span>
     </div>
-
-    <div class="form-group">
-        <input type="submit" value="Add Book" class="btn btn-primary" />
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label asp-for="TotalPages">Total Pages</label>
+            <input asp-for="TotalPages" class="form-control" />
+            <span asp-validation-for="TotalPages" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">        
+        <div class="col-md-6 form-group">
+            <label asp-for="CoverPhoto"></label>
+            <input type="file" asp-for="CoverPhoto" class="form-control-file border" id="CoverPhoto" accept=".jpg, .png, .jpeg, .gif, .bmp, .tiff|images/*" />
+            <span asp-validation-for="CoverPhoto" class="text-danger"></span>
+        </div>
+        <div class="col-md-6 form-group">
+            <label asp-for="GalleryPhoto"></label>
+            <input type="file" asp-for="GalleryPhoto" multiple class="form-control-file border" id="GalleryPhoto"  accept=".jpg, .png, .jpeg, .gif, .bmp, .tiff|images/*" />
+            <span asp-validation-for="GalleryPhoto " class="text-danger"></span>            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <label asp-for="BookPdf"></label>
+            <input type="file" asp-for="BookPdf" accept=".pdf, .tiff|images/*" class="form-control-file border" id="BookPdf" />              
+            <span asp-validation-for="BookPdf " class="text-danger"></span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="submit" value="Add Book" class="btn btn-primary" onclick="return formValidation()" />
+        </div>
     </div>
 </form>
 </div>

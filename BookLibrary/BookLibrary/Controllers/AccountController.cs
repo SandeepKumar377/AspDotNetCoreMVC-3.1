@@ -74,11 +74,11 @@ namespace BookLibrary.Controllers
                 }
                 else if (result.IsLockedOut)
                 {
-                    ModelState.AddModelError("", "Account Blocked try after some time!");
+                    ModelState.AddModelError("", "Account Blocked for 5 minutes!");
                 }
                 else
-                { 
-                ModelState.AddModelError("", "Invalid credertials");
+                {
+                    ModelState.AddModelError("", "Invalid credertials");
                 }
             }
             return View(signInModel);
