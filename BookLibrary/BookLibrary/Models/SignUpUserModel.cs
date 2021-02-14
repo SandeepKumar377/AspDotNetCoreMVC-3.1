@@ -9,7 +9,10 @@ namespace BookLibrary.Models
     public class SignUpUserModel
     {
         [Required(ErrorMessage ="Please enter your First Name!")]
+        [Display(Name = "First Name")]
         public string FirstName { get; set; }
+
+        [Display(Name = "First Name")]
         public string LastName { get; set; }
 
         [Required(ErrorMessage ="Please enter your Email!")]

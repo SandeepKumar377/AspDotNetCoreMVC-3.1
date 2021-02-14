@@ -4,38 +4,45 @@
 }
 
 <div class="container">
-    <div class="row text-center">
-        <div class="col-md-4">
-            @if (Model.EmailVerified == true)
-            {
-                <div class="alert alert-success" role="alert">
-                    <p> Your email has been Verified Successfully!</p>
-                </div>
-            }
-            else
-            {
-                @if (Model.EmailSend)
+    <div class="row">
+        <div class="col-md-4 offset-md-4 text-center">
+            <div class="card m-4 shadow-sm">
+                <div class="card-header font-weight-bold">Email Verification</div>
+                @if (Model.EmailVerified == true)
                 {
-                    <div class="alert alert-success" role="alert">
-                        <p>Re-send Email on your registered email id.</p>
+                    <div class="card-body">
+                        <img src="~/images/successCheck.png" style="height:120px; width:150px;" />
                     </div>
+                    <div class="card-footer bg-transparent text-success">Your email has been Verified Successfully!</div>
                 }
                 else
                 {
-                    <div class="alert alert-success" role="alert">
-                        <p>We have send an email on your email id. Click on the link to login.</p>
-                    </div>                    
-                }
-                <form asp-action="ConfirmEmail">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                    <input type="hidden" asp-for="Email" />
-                    <p class="text-info">Did not get email of deleted by mistake?</p>
+                    @if (Model.EmailSend)
+                    {
+                        <div class="alert alert-success" role="alert">
+                            <p>Re-send Email on your registered email id.</p>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="alert text-info">
+                            <p>We have send an email on your email id. Click on the link to verify.</p>
+                        </div>
+                    }
+            <form asp-action="ConfirmEmail">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="Email" />
+                <p class="text-info"><span class="text-danger">Note:</span> Did not get email of deleted by mistake?</p>
+                <div class="card-footer text-success">
                     <div class="form-group">
                         <input type="submit" value="Resend confirmation email" class="btn btn-primary" />
                     </div>
-                </form>
-            }
-        </div>
+                </div>
+                
+            </form>
+                }
+            </div>
+            </div>
     </div>
 </div>
 

@@ -25,14 +25,14 @@
     <div class="row">
         <div class="col-md-12 form-group">
             <label asp-for="Title"></label>
-            <input asp-for="Title" class="form-control" />
+            <input asp-for="Title" class="form-control" placeholder="Enter book title" />
             <span asp-validation-for="Title" class="text-danger"></span>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 form-group">
             <label asp-for="Author"></label>
-            <input asp-for="Author" class="form-control" />
+            <input asp-for="Author" class="form-control" placeholder="Enter book author" />
             <span asp-validation-for="Author" class="text-danger"></span>
         </div>
     </div>
@@ -49,14 +49,14 @@
     <div class="row">
         <div class="col-md-12 form-group">
             <label asp-for="Description"></label>
-            <textarea asp-for="Description" class="form-control"></textarea>
+            <textarea asp-for="Description" class="form-control"  placeholder="Enter book description"></textarea>
             <span asp-validation-for="Description" class="text-danger"></span>
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 form-group">
             <label asp-for="TotalPages">Total Pages</label>
-            <input asp-for="TotalPages" class="form-control" />
+            <input asp-for="TotalPages" class="form-control"  placeholder="Enter total page" />
             <span asp-validation-for="TotalPages" class="text-danger"></span>
         </div>
     </div>

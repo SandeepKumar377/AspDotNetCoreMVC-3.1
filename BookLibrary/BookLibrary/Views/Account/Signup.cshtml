@@ -26,37 +26,37 @@
     </environment>
 </head>
 <body>
-    <div class="container shadow-lg">
+    <div class="container shadow-lg p-4" style="width:500px">
 
         <h4>Sign Up</h4>
         <hr />
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-12">
                 <form asp-action="Signup">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                     <div class="form-group">
                         <label asp-for="FirstName" class="control-label"></label>
-                        <input asp-for="FirstName" class="form-control" />
+                        <input asp-for="FirstName" class="form-control" placeholder="Enter your first name" />
                         <span asp-validation-for="FirstName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="LastName" class="control-label"></label>
-                        <input asp-for="LastName" class="form-control" />
+                        <input asp-for="LastName" class="form-control" placeholder="Enter your last name" />
                         <span asp-validation-for="LastName" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Email" class="control-label"></label>
-                        <input asp-for="Email" class="form-control" />
+                        <input asp-for="Email" class="form-control" placeholder="Enter your email" />
                         <span asp-validation-for="Email" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control" />
+                        <input asp-for="Password" class="form-control" placeholder="Enter your password" />
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
                     <div class="form-group">
                         <label asp-for="ConfirmPassword" class="control-label"></label>
-                        <input asp-for="ConfirmPassword" class="form-control" />
+                        <input asp-for="ConfirmPassword" class="form-control" placeholder="Enter your confirm password" />
                         <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                     </div>
                     <div class="form-group">
@@ -65,14 +65,14 @@
                 </form>
             </div>
         
-            <div class="col-md-8">
+            @*<div class="col-md-8">
                 <img src="~/images/SignUp.png" />
-            </div>
+            </div>*@
         
         </div>
 
         <div>
-            <p>Click <a asp-action="Login" asp-controller="Account">here</a> to Sign In.</p>
+            <p>Click <a asp-action="Login" asp-controller="Account">here</a> to Log In.</p>
         </div>
     </div>
 </body>
